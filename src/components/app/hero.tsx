@@ -15,7 +15,7 @@ export function Hero() {
           </div>
           <div className="space-x-4">
             <Button>Começar agora!</Button>
-            <Button variant="outline">Leia mais</Button>
+            <Button variant="secondary">Leia mais</Button>
           </div>
         </div>
       </div>

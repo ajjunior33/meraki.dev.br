@@ -8,15 +8,18 @@ import { Team } from "@/components/app/team";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Header />
-      <Hero />
-      <Services />
+    <div className="flex min-h-screen flex-col">
 
-      <Projects />
-      <Team />
-      <Contact />
-      <Footer/>
-    </main>
+      <Header />
+      <main className="flex-1 pt-20">
+        <Hero />
+        <Services />
+
+        <Projects />
+        <Team />
+        <Contact />
+        <Footer />
+      </main>
+    </div>
   )
 }
