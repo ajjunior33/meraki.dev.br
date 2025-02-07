@@ -1,3 +1,4 @@
+import { ClientCarousel } from "@/components/app/client-carousel";
 import { Contact } from "@/components/app/contact";
 import { Footer } from "@/components/app/footer";
 import { Header } from "@/components/app/header";
@@ -15,6 +16,8 @@ export default function Home() {
       <main className="flex-1 pt-20">
         <Hero />
         <Services />
+
+        <ClientCarousel />
 
         <Projects projects={projects} />
         <Team />
