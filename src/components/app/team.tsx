@@ -22,6 +22,21 @@ const team = [
     role: "CEO | Frontend Engineer",
     image: "/placeholder.svg?height=400&width=300",
   },
+  {
+    name: "M. Carolina",
+    role: "CFO",
+    image: "/placeholder.svg?height=400&width=300",
+  },
+  {
+    name: "Raquel Patez",
+    role: "CMO",
+    image: "/placeholder.svg?height=400&width=300",
+  },
+  {
+    name: "Yan Bada",
+    role: "QA Director",
+    image: "/placeholder.svg?height=400&width=300",
+  },
 ]
 
 export function Team() {
