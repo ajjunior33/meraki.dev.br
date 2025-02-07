@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
 const clients = [
-  { name: "Client 1", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Client 2", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Client 3", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Client 4", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Client 5", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Client 6", logo: "/placeholder.svg?height=100&width=200" },
+  { name: "Client 1", logo: "/company.svg" },
+  { name: "Client 2", logo: "/company.svg" },
+  { name: "Client 3", logo: "/company.svg" },
+  { name: "Client 4", logo: "/company.svg" },
+  { name: "Client 5", logo: "/company.svg" },
+  { name: "Client 6", logo: "/company.svg" },
 ]
 
 export function ClientCarousel() {

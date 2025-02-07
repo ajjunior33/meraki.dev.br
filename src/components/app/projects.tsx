@@ -16,16 +16,16 @@ export function Projects({ projects }: ProjectsProps) {
           {projects.map((project) => (
             <Card key={project.id}>
               <Link href={`/projects/${project.id}`}>
-                <CardContent className="p-4">
+                <CardContent className="p-4  flex flex-col items-center justify-center">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.name}
                     width={300}
                     height={200}
-                    className="rounded-lg mb-4"
+                    className="rounded-lg mb-4 w-full"
                   />
-                  <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                  <p className="text-gray-600">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 w-full">{project.name}</h3>
+                  <p className="text-gray-600 w-full">{project.description}</p>
                 </CardContent>
               </Link>
             </Card>

@@ -15,27 +15,27 @@ const team = [
   {
     name: "Matheus Oliveira",
     role: "Co - Founder | Full Stack Engineer",
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/profile.jpg",
   },
   {
     name: "Samuel",
     role: "CEO | Frontend Engineer",
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/profile.jpg",
   },
   {
     name: "M. Carolina",
     role: "CFO",
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/profile.jpg",
   },
   {
     name: "Raquel Patez",
     role: "CMO",
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/profile.jpg",
   },
   {
     name: "Yan Bada",
     role: "QA Director",
-    image: "/placeholder.svg?height=400&width=300",
+    image: "/profile.jpg",
   },
 ]
 
