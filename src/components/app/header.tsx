@@ -15,7 +15,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="w-full px-4 lg:px-6 h-20 flex items-center fixed top-0 bg-white">
+    <header className="w-full px-4 lg:px-6 h-20 flex items-center fixed top-0 bg-white z-50">
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
         <Image src="./meraki.svg" width={40} height={40} alt="Logo" />

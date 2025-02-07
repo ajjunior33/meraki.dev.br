@@ -49,13 +49,13 @@ export function ClientCarousel() {
   }
 
   return (
-    <section className="w-full py-12 bg-gray-100 flex items-center justify-center">
+    <section className="w-full py-12 bg-gray-100 flex items-center justify-center z-0">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold text-center mb-8">Clientes</h2>
-        <Slider {...settings} className="client-carousel">
+        <Slider {...settings} className="client-carousel z-0">
           {clients.map((client, index) => (
-            <div key={index} className="px-4">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center h-32">
+            <div key={index} className="px-4 z-0">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center h-32 z-0">
                 <Image
                   src={client.logo || "/placeholder.svg"}
                   alt={client.name}
