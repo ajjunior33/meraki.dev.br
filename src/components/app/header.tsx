@@ -35,7 +35,7 @@ export function Header() {
             Contato
           </Link>
         </nav>
-        <Button className="hidden md:flex">Área do Cliente</Button>
+        <Button className="hidden md:flex bg-primary hover:bg-[#B32F00] text-white">Área do Cliente</Button>
       </div>
     </header>
   )

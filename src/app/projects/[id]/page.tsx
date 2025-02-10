@@ -39,8 +39,8 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         <div className="container mx-auto px-4 py-8">
           <Link href="/#projects">
             <Button variant="outline" className="mb-8">
-            <ArrowLeft /> 
-            Voltar para projetos
+              <ArrowLeft />
+              Voltar para projetos
             </Button>
           </Link>
 
@@ -52,7 +52,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             </div>
             <div className="mt-4 md:mt-0">
               <Image
-                src="/company.svg"
+                src={project.customerLogo}
                 alt="Client Logo"
                 width={200}
                 height={60}
@@ -91,13 +91,13 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           {/* Project Description */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Project Description</h2>
+              <h2 className="text-2xl font-semibold mb-4">Descrição</h2>
               <p className="text-gray-600">{project.longDescription}</p>
             </div>
 
             {project.clientTestimonial && (
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h2 className="text-2xl font-semibold mb-4">Client Testimonial</h2>
+                <h2 className="text-2xl font-semibold mb-4">Testemunho</h2>
                 <blockquote className="text-gray-600 italic">&quot;{project.clientTestimonial}&quot;</blockquote>
               </div>
             )}

@@ -1,28 +1,33 @@
 "use client"
+
 import Image from "next/image"
 import Slider from "react-slick"
+
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
 const clients = [
-  { name: "Client 1", logo: "/company.svg" },
-  { name: "Client 2", logo: "/company.svg" },
-  { name: "Client 3", logo: "/company.svg" },
-  { name: "Client 4", logo: "/company.svg" },
-  { name: "Client 5", logo: "/company.svg" },
-  { name: "Client 6", logo: "/company.svg" },
+  { name: "Nexux", logo: "/nexux-logo.png" },
+  { name: "NWT", logo: "/nwt-logo.png" },
+  { name: "SDEC Tecnologia", logo: "/sdec-logo.png" },
+  { name: "Vibbra", logo: "/vibbra-logo.svg" },
+  { name: "Remessa Online", logo: "/remessa-online-logo.svg" },
+  { name: "Universus", logo: "/universus-logo.svg" },
 ]
 
 export function ClientCarousel() {
   const settings = {
     dots: false,
+    focusOnSelect: true,
+    pauseOnHover: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 100,
+    speed: 3500,
+    autoplaySpeed: 1,
     cssEase: "linear",
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,

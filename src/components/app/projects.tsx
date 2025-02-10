@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import type { Project } from "@/lib/projects"
 import Image from "next/image"
 import Link from "next/link"
+import { Button } from "../ui/button"
 
 interface ProjectsProps {
   projects: Project[]
@@ -10,7 +11,7 @@ interface ProjectsProps {
 export function Projects({ projects }: ProjectsProps) {
   return (
     <section id="projects" className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 flex items-center justify-center gap-5 flex-col">
         <h2 className="text-3xl font-bold text-center mb-12">Projetos</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project) => (
@@ -31,6 +32,8 @@ export function Projects({ projects }: ProjectsProps) {
             </Card>
           ))}
         </div>
+
+        <Button size="lg">Ver mais</Button>
       </div>
     </section>
   )
