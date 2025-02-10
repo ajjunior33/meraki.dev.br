@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { motion } from "framer-motion"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import { useRef } from "react"
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useRef } from "react";
 
 const team = [
   {
@@ -15,12 +15,12 @@ const team = [
   {
     name: "Matheus Oliveira",
     role: "Co - Founder | Full Stack Engineer",
-    image: "/profile.jpg",
+    image: "/matheus_oliveira.jpeg",
   },
   {
-    name: "Samuel",
+    name: "Samuel Vermeuln",
     role: "CEO | Frontend Engineer",
-    image: "/profile.jpg",
+    image: "/samuel_vermeuln.jpeg",
   },
   {
     name: "M. Carolina",
@@ -30,30 +30,33 @@ const team = [
   {
     name: "Raquel Patez",
     role: "CMO",
-    image: "/profile.jpg",
+    image: "/raquel_patez.jpeg",
   },
   {
     name: "Yan Bada",
     role: "QA Director",
     image: "/profile.jpg",
   },
-]
+];
 
 export function Team() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 300
+      const scrollAmount = 300;
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
-      })
+      });
     }
-  }
+  };
 
   return (
-    <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-white relative flex items-center justify-center">
+    <section
+      id="team"
+      className="w-full py-12 md:py-24 lg:py-32 bg-white relative flex items-center justify-center"
+    >
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold text-center mb-12">Nosso time</h2>
 
@@ -99,7 +102,9 @@ export function Team() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
+                    <h3 className="text-lg font-semibold mb-1">
+                      {member.name}
+                    </h3>
                     <p className="text-sm text-gray-600">{member.role}</p>
                   </div>
                 </CardContent>
@@ -109,6 +114,5 @@ export function Team() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
