@@ -35,7 +35,7 @@ const team = [
   {
     name: "Yan Bada",
     role: "QA Director",
-    image: "/profile.jpg",
+    image: "/yan_bada.jpg",
   },
 ];
 
