@@ -1,11 +1,18 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import type React from "react"
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import type React from "react";
+import { useCallback } from "react";
 
-const FloatingElement = ({ delay, children }: { delay: number; children: React.ReactNode }) => (
+const FloatingElement = ({
+  delay,
+  children,
+}: {
+  delay: number;
+  children: React.ReactNode;
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -18,9 +25,20 @@ const FloatingElement = ({ delay, children }: { delay: number; children: React.R
   >
     {children}
   </motion.div>
-)
+);
 
 export function Hero() {
+  const scrollToSection = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+      e.preventDefault();
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    },
+    [],
+  );
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-secondary text-white overflow-hidden relative">
       <FloatingElement delay={0.6}>
@@ -41,7 +59,7 @@ export function Hero() {
             className="space-y-2"
           >
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-            Soluções de software inovadoras
+              Soluções de software inovadoras
             </h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -49,7 +67,8 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="mx-auto max-w-[700px] text-gray-300 md:text-xl"
             >
-             Criamos software de ponta para ajudar empresas a prosperar na era digital.
+              Criamos software de ponta para ajudar empresas a prosperar na era
+              digital.
             </motion.p>
           </motion.div>
           <motion.div
@@ -58,20 +77,32 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="space-x-4"
           >
-            <Button asChild className="bg-primary text-white hover:bg-[#B32F00] transition-colors duration-300">
-              <Link href="#contact">Vamos nessa</Link>
+            <Button
+              asChild
+              className="bg-primary text-white hover:bg-[#B32F00] transition-colors duration-300"
+            >
+              <Link
+                onClick={(e) => scrollToSection(e, "contact")}
+                href="#contact"
+              >
+                Vamos nessa
+              </Link>
             </Button>
             <Button
               asChild
               variant="outline"
               className="bg-transparent text-white border-white hover:bg-white hover:text-secondary transition-colors duration-300"
             >
-              <Link href="#services">Ler mais</Link>
+              <Link
+                onClick={(e) => scrollToSection(e, "contact")}
+                href="#services"
+              >
+                Ler mais
+              </Link>
             </Button>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
