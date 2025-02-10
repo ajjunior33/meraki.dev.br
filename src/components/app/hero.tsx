@@ -94,7 +94,7 @@ export function Hero() {
               className="bg-transparent text-white border-white hover:bg-white hover:text-secondary transition-colors duration-300"
             >
               <Link
-                onClick={(e) => scrollToSection(e, "contact")}
+                onClick={(e) => scrollToSection(e, "services")}
                 href="#services"
               >
                 Ler mais

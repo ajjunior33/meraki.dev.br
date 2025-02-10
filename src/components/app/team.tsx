@@ -25,7 +25,7 @@ const team = [
   {
     name: "Maria Carolina",
     role: "CFO",
-    image: "/promaria_carolina.jpeg",
+    image: "/maria_carolina.jpeg",
   },
   {
     name: "Raquel Patez",
