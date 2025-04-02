@@ -1,6 +1,5 @@
 import { Footer } from "@/components/app/footer"
 import { Header } from "@/components/app/header"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { projects } from "@/lib/projects"
 import { ArrowLeft } from "lucide-react"
@@ -9,19 +8,18 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 
 const techLogos: { [key: string]: string } = {
-  React: "/placeholder.svg",
+  React: "/icons/react.svg",
   "Node.js": "/placeholder.svg",
-  MongoDB: "/placeholder.svg",
+  MongoDB: "/icons/MongoDB.svg",
   Redux: "/placeholder.svg",
   Stripe: "/placeholder.svg",
-  "React Native": "/placeholder.svg",
-  "Express.js": "/placeholder.svg",
-  PostgreSQL: "/placeholder.svg",
+  "React Native": "/icons/react.svg",
+  "Express.js": "/icons/express.svg",
+  "Vite.js": "/icons/vite.svg",
+  PostgreSQL: "/icons/PostgresSQL.svg",
   JWT: "/placeholder.svg",
-  Python: "/placeholder.svg",
-  TensorFlow: "/placeholder.svg",
-  "D3.js": "/placeholder.svg",
-  AWS: "/placeholder.svg",
+  AWS: "/icons/aws.svg",
+  "Digital Ocean": "/icons/digital_ocean.svg",
 }
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
@@ -68,7 +66,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
           {/* Technologies Used */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Technologies Used</h2>
+            <h2 className="text-2xl font-semibold mb-4">Tecnologias usadas</h2>
             <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
               {project.technologies.map((tech, index) => (
                 <div
@@ -103,19 +101,6 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             )}
           </div>
 
-          {/* Key Features or Highlights */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-            <div className="flex flex-wrap gap-2">
-              {["Scalable", "Secure", "User-friendly", "Mobile Responsive", "High Performance"].map(
-                (feature, index) => (
-                  <Badge key={index} variant="secondary" className="text-sm">
-                    {feature}
-                  </Badge>
-                ),
-              )}
-            </div>
-          </div>
         </div>
       </main>
 
