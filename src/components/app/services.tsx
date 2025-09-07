@@ -3,10 +3,20 @@ import { Code, Smartphone, Globe } from "lucide-react"
 
 export function Services() {
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-gray-10 flex items-center justify-center">
-      <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Serviços</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <section id="services" className="py-20 px-4 bg-gradient-to-br from-background to-muted/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+            O que podemos fazer por você
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+            Oferecemos soluções personalizadas para atender às necessidades do seu negócio. Conheça nossos serviços e descubra como podemos ajudar.
+          </p>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-6">
+
           <Card>
             <CardHeader>
               <Code className="w-10 h-10 mb-2" />
@@ -39,7 +49,10 @@ export function Services() {
             </CardContent>
           </Card>
         </div>
+
       </div>
+
+
     </section>
   )
 }

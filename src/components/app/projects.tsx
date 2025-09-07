@@ -10,10 +10,20 @@ interface ProjectsProps {
 
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <section id="projects" className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center">
-      <div className="container px-4 md:px-6 flex items-center justify-center gap-5 flex-col">
-        <h2 className="text-3xl font-bold text-center mb-12">Projetos</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <section id="projects" className="py-20 px-4 bg-gradient-to-br from-background to-muted/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+            Soluções que geram impacto real
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+            Veja projetos que entregamos com excelência — do planejamento à execução, sempre com foco em performance, inovação e valor para o cliente.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
           {projects.map((project) => (
             <Card key={project.id}>
               <Link href={`/projects/${project.id}`}>
@@ -33,8 +43,9 @@ export function Projects({ projects }: ProjectsProps) {
           ))}
         </div>
 
-        <Button size="lg">Ver mais</Button>
       </div>
+
+
     </section>
   )
 }

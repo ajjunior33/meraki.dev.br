@@ -54,26 +54,37 @@ export function ClientCarousel() {
   }
 
   return (
-    <section className="w-full py-12 bg-gray-100 flex items-center justify-center z-0">
-      <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold text-center mb-8">Clientes</h2>
-        <Slider {...settings} className="client-carousel z-0">
-          {clients.map((client, index) => (
-            <div key={index} className="px-4 z-0">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center h-32 z-0">
-                <Image
-                  src={client.logo || "/placeholder.svg"}
-                  alt={client.name}
-                  width={150}
-                  height={75}
-                  className="max-w-full max-h-full object-contain"
-                />
+
+    <section className="py-20 px-4 bg-gradient-to-br from-background to-muted/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+            Quem confia em nosso trabalho
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+            Atendemos empresas de diversos setores que compartilham nosso compromisso com qualidade, inovação e resultado. Conheça alguns dos nossos parceiros.
+          </p>
+        </div>
+
+          <Slider {...settings} className="client-carousel z-0">
+            {clients.map((client, index) => (
+              <div key={index} className="px-4 z-0">
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center h-32 z-0">
+                  <Image
+                    src={client.logo || "/placeholder.svg"}
+                    alt={client.name}
+                    width={150}
+                    height={75}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+
       </div>
+
+
     </section>
   )
 }
-

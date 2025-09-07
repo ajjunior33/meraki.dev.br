@@ -35,8 +35,8 @@ export function Contact() {
           {/* Left Column - Contact Information */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold tracking-tighter">Obter uma cotação</h2>
-              <p className="text-gray-400">Preencha o formulário e nossa equipe entrará em contato com você em até 24 horas.</p>
+              <h2 className="text-4xl font-bold tracking-tighter">Vamos conversar?</h2>
+              <p className="text-gray-400">Entre em contato com a gente para tirar dúvidas, solicitar uma proposta ou iniciar um novo projeto. Estamos prontos para te ouvir.</p>
             </div>
 
             <div className="space-y-6">

@@ -53,66 +53,81 @@ export function Team() {
   };
 
   return (
-    <section
-      id="team"
-      className="w-full py-12 md:py-24 lg:py-32 bg-white relative flex items-center justify-center"
-    >
-      <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Nosso time</h2>
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors duration-200"
-          aria-label="Scroll left"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors duration-200"
-          aria-label="Scroll right"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Team Cards Container */}
-        <div
-          ref={scrollContainerRef}
-          className="flex overflow-x-auto scrollbar-hide gap-6 pb-4 -mx-4 px-4 snap-x snap-mandatory"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {team.map((member, index) => (
-            <motion.div
-              key={index}
-              className="flex-none w-[300px] snap-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <Card className="overflow-hidden border-none shadow-none">
-                <CardContent className="p-0">
-                  <div className="relative aspect-[3/4] mb-4">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      fill
-                      className="object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-gray-600">{member.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+    <section className="py-20 px-4 bg-gradient-to-br from-background to-muted/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+            Profissionais que fazem a diferença
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+            Nosso time é formado por especialistas comprometidos com resultados e inovação. Juntos, entregamos excelência em cada projeto.
+          </p>
         </div>
+
+        <section
+          id="team"
+          className="w-full py-12 md:py-24 lg:py-32 bg-white relative flex items-center justify-center"
+        >
+          <div className="container px-4 md:px-6">
+            <button
+              onClick={() => scroll("left")}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors duration-200"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors duration-200"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Team Cards Container */}
+            <div
+              ref={scrollContainerRef}
+              className="flex overflow-x-auto scrollbar-hide gap-6 pb-4 -mx-4 px-4 snap-x snap-mandatory"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {team.map((member, index) => (
+                <motion.div
+                  key={index}
+                  className="flex-none w-[300px] snap-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Card className="overflow-hidden border-none shadow-none">
+                    <CardContent className="p-0">
+                      <div className="relative aspect-[3/4] mb-4">
+                        <Image
+                          src={member.image || "/placeholder.svg"}
+                          alt={member.name}
+                          fill
+                          className="object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-lg font-semibold mb-1">
+                          {member.name}
+                        </h3>
+                        <p className="text-sm text-gray-600">{member.role}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </div>
+
+
     </section>
+
   );
 }
