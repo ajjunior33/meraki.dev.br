@@ -8,7 +8,7 @@ const partner = {
   name: "Zenvia",
   description:
     "Plataforma de comunicação omnichannel para empresas que revoluciona a forma como nos conectamos com nossos clientes",
-  logo: "/zenvia-logo.jpg",
+  logo: "https://www.zenvia.com/wp-content/uploads/2025/02/logo_zenvia.svg",
   website: "https://zenvia.com",
   features: [
     { name: "Comunicação Omnichannel", icon: MessageCircle },
@@ -40,20 +40,14 @@ export const Partners = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
                 <div className="flex items-center space-x-6">
-                  <div className="p-4 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300">
+                  <div className="p-4 bg-gradient-to-r from-blue-600 via-primary/40 to-purple-600 rounded-2xl  transition-all duration-300">
                     <Image
                       src={partner.logo}
                       width={120}
                       height={60}
                       alt={`Logo ${partner.name}`}
-                      className="h-16 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                      className="h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                     />
-                  </div>
-                  <div>
-                    <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                      {partner.name}
-                    </h3>
-                    <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2"></div>
                   </div>
                 </div>
                 <p className="text-xl text-muted-foreground leading-relaxed">{partner.description}</p>
@@ -61,8 +55,6 @@ export const Partners = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
-                    className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group/btn border-0"
-                    style={{ backgroundColor: "#1d4ed8", color: "#ffffff" }}
                     onClick={() => window.open(partner.website, "_blank")}
                   >
                     Visite o Site da Zenvia
@@ -71,9 +63,8 @@ export const Partners = () => {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-2 border-blue-700 text-blue-800 hover:bg-blue-700 hover:text-white px-8 py-4 text-lg font-semibold bg-white"
-                    style={{ borderColor: "#1d4ed8", color: "#1e40af", backgroundColor: "#ffffff" }}
-                  >
+              className="border-2 border-primary/90 text-primary hover:bg-primary hover:text-white bg-white px-6 py-3"
+                   >
                     Saiba Mais
                   </Button>
                 </div>
@@ -112,8 +103,7 @@ export const Partners = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-blue-700 text-blue-800 hover:bg-blue-700 hover:text-white bg-white px-6 py-3"
-              style={{ borderColor: "#1d4ed8", color: "#1e40af", backgroundColor: "#ffffff" }}
+              className="border-2 border-primary/90 text-primary hover:bg-primary hover:text-white bg-white px-6 py-3"
             >
               Saiba Como Funciona
             </Button>
