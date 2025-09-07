@@ -3,6 +3,7 @@ import { Contact } from "@/components/app/contact";
 import { Footer } from "@/components/app/footer";
 import { Header } from "@/components/app/header";
 import { Hero } from "@/components/app/hero";
+import { Partners } from "@/components/app/partners";
 import { Projects } from "@/components/app/projects";
 import { Services } from "@/components/app/services";
 import { Team } from "@/components/app/team";
@@ -18,7 +19,7 @@ export default function Home() {
         <Services />
 
         <ClientCarousel />
-
+        <Partners />
         <Projects projects={projects} />
         <Team />
         <Contact />
